@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"van14.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="第一章第一节前言本文我将分享给大家一套我自己使用良久并觉得非常高效的 学习论，它可以运用到 Leetcode 上的刷题，也可以 generalize 到生活中涉及到学习以及记忆的方方面面。当然，本文将以 Leetcode 刷题为 case study 去进行讲解。 更具体一点, 我会教大家如何运用该学习论在 4 个月的时间内从 0 算法基础到实打实刷满 500 道题，并且形成长期记忆，同时">
+<meta property="og:type" content="article">
+<meta property="og:title" content="再次测试图片以及分级功能">
+<meta property="og:url" content="http://van14.com/posts/b046a95c.html">
+<meta property="og:site_name" content="van_blog">
+<meta property="og:description" content="第一章第一节前言本文我将分享给大家一套我自己使用良久并觉得非常高效的 学习论，它可以运用到 Leetcode 上的刷题，也可以 generalize 到生活中涉及到学习以及记忆的方方面面。当然，本文将以 Leetcode 刷题为 case study 去进行讲解。 更具体一点, 我会教大家如何运用该学习论在 4 个月的时间内从 0 算法基础到实打实刷满 500 道题，并且形成长期记忆，同时">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gitee.com/van14/image/raw/master/img/202407120727028.png">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/1692430/1720061132328-b3fcb456-e92c-4152-a2f8-48db8c94576d.png?x-oss-process=image%2Fformat%2Cwebp">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/1692430/1720061132308-4c40054f-aa3a-41ac-b124-a34aca57dafc.png">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/1692430/1720061132434-0490c583-8710-44d0-b6a2-55e89ee6dad8.png">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/1692430/1720061133079-8169dc25-2382-4966-a76a-e1bd910e50ac.png">
+<meta property="article:published_time" content="2024-07-11T23:25:28.000Z">
+<meta property="article:modified_time" content="2024-07-11T23:29:10.527Z">
+<meta property="article:author" content="van shu">
+<meta property="article:tag" content="刷题">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/van14/image/raw/master/img/202407120727028.png">
+
+<link rel="canonical" href="http://van14.com/posts/b046a95c.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>再次测试图片以及分级功能 | van_blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">van_blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">7</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">9</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">5</span></a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container"></div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="algolia-results">
+  <div id="algolia-stats"></div>
+  <div id="algolia-hits"></div>
+  <div id="algolia-pagination" class="algolia-pagination"></div>
+</div>
+
+      
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://van14.com/posts/b046a95c.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="van shu">
+      <meta itemprop="description" content="记录人生，享受生活">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="van_blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          再次测试图片以及分级功能
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2024-07-12 07:25:28 / 修改时间：07:29:10" itemprop="dateCreated datePublished" datetime="2024-07-12T07:25:28+08:00">2024-07-12</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/leetcode/" itemprop="url" rel="index"><span itemprop="name">leetcode</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <meta name="referrer" content="no-referrer" />
+
+
+
+<h1 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h1><h2 id="第一节前言"><a href="#第一节前言" class="headerlink" title="第一节前言"></a>第一节前言</h2><p>本文我将分享给大家一套我自己使用良久并觉得非常高效的 <code>学习论</code>，它可以运用到 Leetcode 上的刷题，也可以 generalize 到生活中涉及到学习以及记忆的方方面面。当然，本文将以 Leetcode 刷题为 case study 去进行讲解。 更具体一点, <code>我会教大家如何运用该学习论在 4 个月的时间内从 0 算法基础到实打实刷满 500 道题，并且形成长期记忆，同时具备高效解决各种同类型题目的能力。</code></p>
+<h2 id="第二节自我介绍"><a href="#第二节自我介绍" class="headerlink" title="第二节自我介绍"></a>第二节自我介绍</h2><p>我是 <code>Eason</code>, 是一名现在就读于 CMU， CS 院 AI 相关 Master 的研二学生。在我的求职备战期间，我是一名忠实的 Leetcode 用户，并最终凭借 Leetcode 这个平台给予的各方面帮助和资源拿到了<code>北美 Facebook (Meta) 的 Full-Time Offer</code>。时隔数月，我怀着一颗感恩的心回到这里，希望可以给大家分享下自己在 4 个月的备战期间积累的一些个人经验，尽可能地帮助大家少走弯路。<code>本文篇幅较长，但诚意满满，力求字里行间具有逻辑性, 连贯性以及可读性。</code></p>
+<img src="https://gitee.com/van14/image/raw/master/img/202407120727028.png" alt="image-20240712072707957" style="zoom:50%;" />
+
+
+
+
+
+
+
+<h1 id="第二章刷题时间线"><a href="#第二章刷题时间线" class="headerlink" title="第二章刷题时间线"></a>第二章刷题时间线</h1><h2 id="第一节"><a href="#第一节" class="headerlink" title="第一节"></a>第一节</h2><p>我准备刷题的时间点非常晚 ( Master 第一年全部用来刷 GPA 了，没有做任何面试准备，甚至没有实习, 现在回首坦诚地讲有一丝后悔)。真正开始有规律地准备刷题大概是在第二年的 7 月到 10 月这四个月的时间，<code>这四个月我在 Leetcode 上大概有 4500 个左右的 commits，总共 solve 约 550 道题 (难度分布大概是 4 : 6 : 1)</code>, 11 月则是几乎全部用来巩固旧题，进行各种面试前的最后冲刺。</p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/1692430/1720061132328-b3fcb456-e92c-4152-a2f8-48db8c94576d.png?x-oss-process=image%2Fformat%2Cwebp" alt="image.jpg" style="zoom:75%;" />
+
+
+
+
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(1) 短期记忆: 持续若干天或者一两周的记忆 </span><br><span class="line">(2) 中期记忆: 持续数周或者几个月的记忆 </span><br><span class="line">(3) 长期记忆: 持续数年甚至永世不会消逝的记忆。</span><br></pre></td></tr></table></figure>
+
+<p>学习某项技能 (包括刷题)，其终极目标往往是去形成<code>长期记忆</code>，因为它的价值最高，一旦获取便往往很难再遗失。换言之，一旦你会做一道或者一类题目之后，你或许永远都会做。文章开头讨论的 <code>&quot;题海流&quot;</code> 帮助形成的往往是<code>短期记忆</code> – 价值最低的记忆，而把后面探讨的 <code>&quot;归纳流&quot;</code> 加上这个 section 即将介绍的<code>记忆方法</code>综合运用在一起，则是为了帮助形成长期记忆 – 价值连城的记忆。</p>
+<p>形成长期记忆的方法其实非常简单，即 <strong>频繁且有效的重复刺激</strong>。人们永远不会忘记的总是那些需要不断重复的东西: 怎么用筷子吃饭，怎么穿衣装扮，怎么说某种语言等等。之所以永远不会忘记它们，正是因为我们每天都在潜移默化地反复刺激大脑如何去运用它们，而刷题或者 generalize 到学习某项技能亦是如此。因此，这里可以总结出另外一个结论: <code>复习旧题的重要性要远远大于做新题</code>。这一点其实和我们之前讨论的内容相互佐证，彼此呼应。</p>
+<p>那么该如何高效地复习并且形成价值最高的长期记忆呢？这里不得不提一下非常知名的<code>艾宾浩斯遗忘曲线</code>了。</p>
+<p>德国的心理学家艾宾浩斯告诉我们，人对于知识的遗忘速度遵循 <strong>“先快后慢”</strong> 的原则。学得的知识在一天后，如不抓紧复习，很快就只剩下原来的 25%。而随着时间的推移，遗忘的速度会减慢，遗忘的数量也就减少。去有效抵抗这种遗忘现象，最好的办法就是进行有规律的复习 (每 5 分钟，30分钟，12小时，1天，2天，4天，7天，15天，1个月，3个月，6个月)。</p>
+<p>然而私认为这个划分有些过细了，读者可以结合自身的情况进行调整。我个人的复习规律是 <code>每 2 小时，12小时， 2天， 7天，15天，一个月， 三个月</code>。 <strong>这也是为什么我在上文提及到我会将一天分为早上, 中午和晚上三个学习区段，每一个区段只刷很少数量的题 (1 ~ 2题)，并且开始每一个区段之前，都会首先复习之前做过的题，晚上的时候甚至一题也不做，将全部精力都用来复习。</strong></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/1692430/1720061132308-4c40054f-aa3a-41ac-b124-a34aca57dafc.png" alt="img"></p>
+<p>令我感到吃惊的是，在运用这一套记忆方法仅仅数周之后，我就发现我的记忆相对于之前来比变得 <code>异常牢固，坚不可摧</code>, 碰到之前做过的题目可以像哈希表一样用 O(1) 的时间做出响应。当时甚至还和朋友戏谑到感觉自己已经可以开始用 <code>&quot;脊柱做题&quot;</code>。 比如在 Facebook 的面试里我就遇见了共三道之前训练过的题，对于它们，我思考加上写完的时间平均下来大约只有 3 ~ 4 分钟。再结合运用之前介绍的 <code>归纳法</code>，我同时也具备了一定的 generalization 的能力。<code>所以遇见同类型的题目，即便不可以在有限时间内 bug-free 的写完 (比如我面试的最后一道 hard 题 282)，也能做个八九不离十, 并且把思路讲得非常清楚 (而这往往是很多公司更为看重的)。</code></p>
+<p>注意，这里并不是想要鼓励大家去 <code>背题</code>，面试当中遇见原题更像是一种面试官对你的恩赐，可遇而不可求。正确的期待应当是默认每一道题都是 “新题”。这里的 “新题” 之所以带引号是因为严格意义上的新题很少存在，它们大概率只是之前训练过的一类题中的一个变种。<strong>而这一基本事实和机器学习领域的训练模型极为相似</strong>。去训练一个模型之前，我们通常先将数据分为 <code>训练集</code> 和 <code>测试集</code>。我们用训练集去训练模型就好似我们在 Leetcode 上刷题一样，其目的是去增加知识储备的 <code>广度和深度</code>。而用测试集去对 “新事物” 进行预测就可类比成面试官拿 “新题” 测试我们。训练模型这一过程就好似刷题的归纳总结，你归纳的越好，你的拟合性以及性能就越强。<code>这里再一次强调归纳总结的重要性</code>: 不要成为一个只会背诵训练集的劣质模型，尝试去理解和归纳你手中的 “数据”，<strong>时间足够长了, 你或许会发现这世上再无新题。</strong></p>
+<p>这套根据个体记忆规律量身定做的复习方法虽然功效异常强大，但想要长期的坚持却需要非常强大的毅力和自制力 (最后一个 section 我会着重讨论如何锻炼它们)。下面给大家 share 一份 <code>艾宾浩斯记忆曲线的 excel 表格</code>， 大家下载后可以结合自身的记忆规律进行改进 <strong>(PS: 不知道什么原因, 现在好像不支持网页跳转了，如果点击 link 后报 404, 直接复制 URL 到浏览器打开即可)。</strong><br><a href="https://leetcode.cn/link/?target=http://www.xuexili.com/jiyili/1351.html">艾宾浩斯记忆曲线 excel 表格</a><br>(<a href="https://leetcode.cn/link/?target=http://www.xuexili.com/jiyili/1351.html">http://www.xuexili.com/jiyili/1351.html</a>)</p>
+<p>同时也 share 给大家一份我个人强烈推荐并自己也在使用的 track 自己刷题进程的 <code>Notion 模板。</code><br><a href="https://leetcode.cn/link/?target=https://cyber-nannyberry-6da.notion.site/03346a1e6816484bb8a8d12a62158270?v=67a25588672d4ff8a20c9a4e9edee1c5">Notion Track 刷题进展模板</a><br>(<a href="https://leetcode.cn/link/?target=https://cyber-nannyberry-6da.notion.site/03346a1e6816484bb8a8d12a62158270?v=67a25588672d4ff8a20c9a4e9edee1c5">https://cyber-nannyberry-6da.notion.site/03346a1e6816484bb8a8d12a62158270?v=67a25588672d4ff8a20c9a4e9edee1c5</a>)</p>
+<p>模板当前风格如下 (我会着重记录自己对于每一道题目的掌握情况), 建议读者根据自身情况进行调整:<br><img src="https://cdn.nlark.com/yuque/0/2024/png/1692430/1720061132434-0490c583-8710-44d0-b6a2-55e89ee6dad8.png" alt="img"><br><img src="https://cdn.nlark.com/yuque/0/2024/png/1692430/1720061133079-8169dc25-2382-4966-a76a-e1bd910e50ac.png" alt="img"></p>
+<p>最后 share 的是一个在 Youtube 收获 <code>1700 万观看量</code> 的探讨学习方法的 lecture, 其部分核心思想我已经在本文囊括，但依然建议每当自己又变得迷茫时反复观看，认真消化。<br><a href="https://leetcode.cn/link/?target=https://www.youtube.com/watch?v=IlU-zDU6aQ0&t=793s">Study less, study smart</a></p>
+<p><strong>以上 share 的这些资料建议大家结合自己的习惯搭配使用，它们真的可以起到事半功倍的效果哦！</strong></p>
+<h2 id="Section-4-拥抱孤独-过滤外界杂音-平稳心态"><a href="#Section-4-拥抱孤独-过滤外界杂音-平稳心态" class="headerlink" title="Section 4: 拥抱孤独, 过滤外界杂音, 平稳心态"></a>Section 4: 拥抱孤独, 过滤外界杂音, 平稳心态</h2><p>遗憾的是，光有一套系统的学习 (刷题) 方法依然是不够的，如何调节自己的心态并使之始终平稳，对于跨度数月之长的备战期来说甚至显得更为重要。我平稳自身心态的办法有两点:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(1) 拥抱孤独</span><br><span class="line">(2) 过滤外界杂音</span><br></pre></td></tr></table></figure>
+
+<p>这里的拥抱孤独，不是要教唆大家去成为一个孤独的人，而是想要去强调 <code>孤独实际是人与生俱来的一种属性，我们要做的不是去逃避它，而是去接纳它</code>。很多小伙伴在备战期间都会因为孤独感而乱了心神，必须要加入各种刷题打卡群，相互监督群才能放心。<code>然而这种 &quot;放心&quot; 本质上却是虚假的，不可靠的</code>。我起初的时候也加了很多各式各样的群，削尖脑袋试图 “融入” 某个群体从而得到特殊的庇护，但到头来只会发现绝大部分的这种群除了带来无谓的焦虑外，很难起到丁点正面作用。<code>直到后来方才发现自己的孤独感反而可以有效利用成为自身最强大的武器</code>。</p>
+<p>对于做算法题这种需要投入大量精力去思考的 task 而言，独立思考的能力往往大于一切。对于之前介绍的 <code>归纳法</code> 而言更是如此，你更多需要倾听的是自己内心的声音，你想要总结的也是那些属于自己的思维框架。这通过把希望寄托于各种陌生人刷题群是很难实现的。然而, 我并非暗示大家不要去学习他人的东西。事实恰恰相反，别人好的题解，好的文章我们更要认真的去研读，这就和做发明一样，很多伟大的发明实际上都是基于前人的方法上加以改进而得出的，但这丝毫不影响它们的伟大。因此，我想要表达的是希望大家不要从<code>主观意识</code>上抗拒自身的孤独感并不断地寻找庇护。<strong>你不需要任何庇护，至少对刷算法题这件事而言，倘若你能运用好 Leetcode 社区提供的资源，不断强大自身的毅力和信心，再配合使用本文介绍的学习论，你已经完全具备打败它的一切潜质。</strong></p>
+<p>拥抱孤独的另外一个好处就是可以帮助我们 <code>过滤外界杂音</code>。<strong>在之前长达四个月的备战期间，我曾选择近乎彻底地不再登录自己的微信以及各大社交平台。其目的只有一个，那就是抗噪。</strong> 没错，我们不得不承认互联网给当今这个社会带来了种种便利，但也不得不承认如今的互联网是聒噪的，各种社交平台尤甚。里面充斥着各种散播焦虑，攀比和凡尔赛的言论，以及花样繁多的各种洗脑广告和文章。稍有不慎，你就会被 “污染”，你就会<code>潜意识地</code>跟着大众做那些大众认为<code>正确的事情</code>, 而丧失了自己独立思考的能力。别人买房，不代表你也要买房; 别人买车学车，不代表你也要买车学车; 别人炒股，不代表你也要炒股; <strong>别人做任何他们想做的事情都跟你无关，老天赐予你的原本是一个独特而有趣的灵魂，但当有一天你的意识被你口中的 “别人” 所左右之时，你最宝贵的</strong> <code>**独特性**</code><strong>也将不复存在。</strong></p>
+<p>因此，不要再沉迷于各种 <code>伪群体</code>, <code>伪社区</code>, <code>洗脑短视频</code> 之间，最好的方式就是离开它们，或者有效控制它们，从而捍卫你的<code>初心</code>。那么什么样的状态或者是心态可以称之为平稳呢？私认为只要你可以做到 <code>长时间地保持一个节奏，贯彻一个方案，不因取得阶段性成就而大喜，亦不因遭受阶段性挫折而大悲，心静如水，那么你离你的目标就真的不再遥远了。</code></p>
+<h1 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h1><p>以上就是我想要分享给大家的全部内容。人生苦短，能在有限之人生长期坚持一件事情并将其做好实属不易。刷题之路长路漫漫，我真诚的希望大家能够稳住自己的心态，隔离外界的干扰，用最科学和最高效的方法去学习，当你未来回首之际，你将会发现自己从中受益无穷。马上暑假就要来临了，下一届秋招早已迫在眉睫，各位朋友们，倘若此时不动，敢问各位又更待何时呢？</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%88%B7%E9%A2%98/" rel="tag"># 刷题</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/posts/8bf59925.html" rel="prev" title="测试图片">
+      <i class="fa fa-chevron-left"></i> 测试图片
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0"><span class="nav-text">第一章</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E8%8A%82%E5%89%8D%E8%A8%80"><span class="nav-text">第一节前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D"><span class="nav-text">第二节自我介绍</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0%E5%88%B7%E9%A2%98%E6%97%B6%E9%97%B4%E7%BA%BF"><span class="nav-text">第二章刷题时间线</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E8%8A%82"><span class="nav-text">第一节</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Section-4-%E6%8B%A5%E6%8A%B1%E5%AD%A4%E7%8B%AC-%E8%BF%87%E6%BB%A4%E5%A4%96%E7%95%8C%E6%9D%82%E9%9F%B3-%E5%B9%B3%E7%A8%B3%E5%BF%83%E6%80%81"><span class="nav-text">Section 4: 拥抱孤独, 过滤外界杂音, 平稳心态</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%93%E5%B0%BE"><span class="nav-text">结尾</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">van shu</p>
+  <div class="site-description" itemprop="description">记录人生，享受生活</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">van shu</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="//cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js"></script>
+<script src="//cdn.jsdelivr.net/npm/instantsearch.js@4/dist/instantsearch.production.min.js"></script>
+<script src="/js/algolia-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
