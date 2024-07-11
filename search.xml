@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Redis 集群</title>
-    <url>/posts/174793d2.md</url>
+    <url>/posts/174793d2.html</url>
     <content><![CDATA[<p>然后我们在s1目录创建一个sentinel.conf文件，添加下面的内容：</p>
 <figure class="highlight ini"><table><tr><td class="code"><pre><span class="line">port 27001</span><br><span class="line">sentinel announce-ip 192.168.150.101</span><br><span class="line">sentinel monitor mymaster 192.168.150.101 7001 2</span><br><span class="line">sentinel down-after-milliseconds mymaster 5000</span><br><span class="line">sentinel failover-timeout mymaster 60000</span><br><span class="line">dir &quot;/tmp/s1&quot;</span><br></pre></td></tr></table></figure>
 
@@ -48,7 +48,7 @@
   </entry>
   <entry>
     <title>Hello World</title>
-    <url>/posts/4a17b156.md</url>
+    <url>/posts/4a17b156.html</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
@@ -150,8 +150,15 @@
   </entry>
   <entry>
     <title>测试图片</title>
-    <url>/posts/8bf59925.md</url>
+    <url>/posts/8bf59925.html</url>
     <content><![CDATA[<h1 id="测试图片显示"><a href="#测试图片显示" class="headerlink" title="测试图片显示"></a>测试图片显示</h1><p>这是一个测试图片显示的问题。</p>
+<img src="https://gitee.com/van14/image/raw/master/img/202407120708678.jpeg"/>
+
+
+
+
+
+<p><img src="https://gitee.com/van14/image/raw/master/img/202407120706898.jpeg"></p>
 <p><img src="https://gitee.com/van14/image/raw/master/img/202407120646802.png" alt="image-20240712064658756"></p>
 ]]></content>
       <categories>
@@ -163,7 +170,7 @@
   </entry>
   <entry>
     <title>分布式锁</title>
-    <url>/posts/4eb3381c.md</url>
+    <url>/posts/4eb3381c.html</url>
     <content><![CDATA[<h2 id="第一"><a href="#第一" class="headerlink" title="第一"></a>第一</h2><p>为了避免Redis实现的分布式锁超时，Redisson中引入了watch dog的机制，他可以帮助我们在Redisson实例被关闭前，不断的延长锁的有效期。 <strong>自动续租</strong>：当一个Redisson客户端实例获取到一个分布式锁时，如果没有指定锁的超时时间，Watchdog会基于Netty的时间轮启动一个后台任务，定期向Redis发送命令，重新设置锁的过期时间，通常是锁的租约时间的1&#x2F;3。这确保了即使客户端处理时间较长，所持有的锁也不会过期。 <strong>续期时长</strong>：默认情况下，每10s钟做一次续期，续期时长是30s。 <strong>停止续期</strong>：当锁被释放或者客户端实例被关闭时，Watchdog会自动停止对应锁的续租任务。</p>
 <p><strong>当我们加锁时，如果指定了<strong><strong>分布式锁</strong></strong>的超时时间，那么是不会开启看门狗逻辑</strong></p>
 <p>什么情况下会停止续约：</p>
