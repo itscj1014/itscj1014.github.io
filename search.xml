@@ -35,6 +35,16 @@
 
 <p>启动后：</p>
 ]]></content>
+      <categories>
+        <category>Redis</category>
+        <category>分类一</category>
+        <category>分类二</category>
+      </categories>
+      <tags>
+        <tag>Redis</tag>
+        <tag>标签一</tag>
+        <tag>标签二</tag>
+      </tags>
   </entry>
   <entry>
     <title>Hello World</title>
@@ -125,6 +135,18 @@
 <p>通过这种递归方法，我们可以有效地反转链表。递归方法利用了函数调用栈，代码简洁且易于理解。</p>
 <p><img src="https://gitee.com/van14/image/raw/master/img/202407120424932.png" alt="image-20240712042419865"></p>
 ]]></content>
+      <categories>
+        <category>Redis</category>
+        <category>锁</category>
+        <category>分类一</category>
+        <category>分类三</category>
+      </categories>
+      <tags>
+        <tag>Redis</tag>
+        <tag>标签一</tag>
+        <tag>标签二</tag>
+        <tag>分布式锁</tag>
+      </tags>
   </entry>
   <entry>
     <title>分布式锁</title>
@@ -165,10 +187,15 @@
 ]]></content>
       <categories>
         <category>Redis</category>
+        <category>锁</category>
+        <category>分类一</category>
+        <category>分类二</category>
       </categories>
       <tags>
         <tag>Redis</tag>
+        <tag>标签一</tag>
         <tag>分布式锁</tag>
+        <tag>标签三</tag>
       </tags>
   </entry>
 </search>
