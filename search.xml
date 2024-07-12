@@ -204,30 +204,6 @@
       </tags>
   </entry>
   <entry>
-    <title>测试图片</title>
-    <url>/posts/8bf59925.html</url>
-    <content><![CDATA[<meta name="referrer" content="no-referrer" />
-
-
-
-<h1 id="测试图片显示"><a href="#测试图片显示" class="headerlink" title="测试图片显示"></a>测试图片显示</h1><p>这是一个测试图片显示的问题。</p>
-<img src="https://gitee.com/van14/image/raw/master/img/202407120708678.jpeg"/>
-
-
-
-
-
-<p><img src="https://gitee.com/van14/image/raw/master/img/202407120706898.jpeg"></p>
-<p><img src="https://gitee.com/van14/image/raw/master/img/202407120646802.png" alt="image-20240712064658756"></p>
-]]></content>
-      <categories>
-        <category>测试</category>
-      </categories>
-      <tags>
-        <tag>图片</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>分布式锁</title>
     <url>/posts/4eb3381c.html</url>
     <content><![CDATA[<h2 id="第一"><a href="#第一" class="headerlink" title="第一"></a>第一</h2><p>为了避免Redis实现的分布式锁超时，Redisson中引入了watch dog的机制，他可以帮助我们在Redisson实例被关闭前，不断的延长锁的有效期。 <strong>自动续租</strong>：当一个Redisson客户端实例获取到一个分布式锁时，如果没有指定锁的超时时间，Watchdog会基于Netty的时间轮启动一个后台任务，定期向Redis发送命令，重新设置锁的过期时间，通常是锁的租约时间的1&#x2F;3。这确保了即使客户端处理时间较长，所持有的锁也不会过期。 <strong>续期时长</strong>：默认情况下，每10s钟做一次续期，续期时长是30s。 <strong>停止续期</strong>：当锁被释放或者客户端实例被关闭时，Watchdog会自动停止对应锁的续租任务。</p>
@@ -275,6 +251,30 @@
         <tag>标签一</tag>
         <tag>分布式锁</tag>
         <tag>标签三</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>测试图片</title>
+    <url>/posts/8bf59925.html</url>
+    <content><![CDATA[<meta name="referrer" content="no-referrer" />
+
+
+
+<h1 id="测试图片显示"><a href="#测试图片显示" class="headerlink" title="测试图片显示"></a>测试图片显示</h1><p>这是一个测试图片显示的问题。</p>
+<img src="https://gitee.com/van14/image/raw/master/img/202407120708678.jpeg"/>
+
+
+
+
+
+<p><img src="https://gitee.com/van14/image/raw/master/img/202407120706898.jpeg"></p>
+<p><img src="https://gitee.com/van14/image/raw/master/img/202407120646802.png" alt="image-20240712064658756"></p>
+]]></content>
+      <categories>
+        <category>测试</category>
+      </categories>
+      <tags>
+        <tag>图片</tag>
       </tags>
   </entry>
 </search>
